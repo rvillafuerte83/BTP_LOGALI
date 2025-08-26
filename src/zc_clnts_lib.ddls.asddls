@@ -1,14 +1,18 @@
-@AbapCatalog.sqlViewName: 'ZV_CLNTS_LIB'
-@AbapCatalog.compiler.compareFilter: true
-@AbapCatalog.preserveKey: true
-@AccessControl. authorizationCheck: #CHECK @EndUserText.label: 'Ventas'
-
-define view zc_clnts_lib as select from ztb_clnts_lib_ga
-{
-//ztb_clnts_lib
-    key id_libro,
-// key id libro,
-count (distinct id_cliente) as Ventas
+@AbapCatalog.viewEnhancementCategory: [#NONE]
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Ventas'
+@Metadata.ignorePropagatedAnnotations: true
+@ObjectModel.usageType:{
+    serviceQuality: #X,
+    sizeCategory: #S,
+    dataClass: #MIXED
 }
+define view entity ZC_CLNTS_LIB
+  as select from ztb_clnts_lib
+{
 
-group by id_libro
+  key id_libro                   as IdLibro,
+      count(distinct id_cliente) as Ventas
+}
+group by
+  id_libro

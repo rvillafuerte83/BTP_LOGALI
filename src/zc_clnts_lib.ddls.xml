@@ -5,8 +5,8 @@
    <DDLS>
     <DDLNAME>ZC_CLNTS_LIB</DDLNAME>
     <DDLANGUAGE>E</DDLANGUAGE>
-    <DDTEXT>Clientes Libreria</DDTEXT>
-    <SOURCE_TYPE>V</SOURCE_TYPE>
+    <DDTEXT>Ventas</DDTEXT>
+    <SOURCE_TYPE>W</SOURCE_TYPE>
    </DDLS>
   </asx:values>
  </asx:abap>

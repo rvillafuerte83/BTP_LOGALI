@@ -3,7 +3,7 @@
 {
 "FROM":
 [
-"ZTB_CLNTS_LIB_GA"
+"ZTB_CLNTS_LIB"
 ],
 "ASSOCIATED":
 [],
